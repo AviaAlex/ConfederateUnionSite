@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let mySavedData = window.localStorage
+      let myData = window.sessionStorage
+      if (localStorage.getItem("ConfederatePassword")){
+        console.log("Password found.")
+      }else{
+        alert("You have not created a password to this area. Please click OK to create a password.")
+        location.replace("createpassword")
+      }
+      function logout() {
+        console.log("Shutting down...")
+        
+      }
+      function login() {
+        let passwordBox = document.getElementById("passwordbox")
+        if (passwordBox.value == localStorage.getItem("ConfederatePassword")) {
+          location.replace("unionhome")
+        }else{
+          alert("Password is incorrect.")
+        }
+      }
+    </script>
+  </head>
+  <body>
+   <p style="font-family:verdana">
+     Please enter your password to access this area: <input id="passwordbox" placeholder="Password"/>
+     <button type="button" class="btn btn-success" onclick="login()">Submit password and login</button>
+    </p>
+  </body>
+</html>
+     
+    
