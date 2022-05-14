@@ -12,12 +12,12 @@
       }
       function logout() {
         console.log("Shutting down...")
-        
+        location.replace("http://confederate-union.netlify.app")
       }
       function login() {
         let passwordBox = document.getElementById("passwordbox")
         if (passwordBox.value == localStorage.getItem("ConfederatePassword")) {
-          location.replace("unionhome")
+          location.replace("confederatehome")
         }else{
           alert("Password is incorrect.")
         }
@@ -30,8 +30,7 @@
    <p style="font-family:verdana">
      Please enter your password to access this area: <input id="passwordbox" placeholder="Password"/>
      <button type="button" class="btn btn-success" onclick="login()">Submit password and login</button>
+     <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
     </p>
   </body>
 </html>
-     
-    
