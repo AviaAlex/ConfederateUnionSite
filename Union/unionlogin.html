@@ -12,7 +12,7 @@
       }
       function logout() {
         console.log("Shutting down...")
-        location.replace("confederate-union.netlify.app")
+        location.replace("http://confederate-union.netlify.app")
       }
       function login() { // Start login loop.
         let passwordBox = document.getElementById("passwordbox")
@@ -30,7 +30,8 @@
   <body>
    <p style="font-family:verdana">
      Please enter your password to access this area: <input id="passwordbox" placeholder="Password"/>
-     <button type="button" class="btn btn-success" onclick="login()">Submit password and login</button>
+     <button type="button" class="btn btn-success" onclick="login()">Submit password and login</button> <br/>
+     <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
     </p>
   </body>
 </html>
